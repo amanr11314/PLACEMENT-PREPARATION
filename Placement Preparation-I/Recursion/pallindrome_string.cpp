@@ -6,7 +6,7 @@ bool isPallindrome(string s) {
     char e = s.back();
     //compare first and last char of string
     cout << "Comparing " << b << "\tand\t" << e << endl;
-    //rema
+    //remaining string between first and last char of string
     string t = s.substr(1, s.size() - 2);
     return (b == e) && isPallindrome(t);
 }
