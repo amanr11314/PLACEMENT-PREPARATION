@@ -18,7 +18,6 @@ bool isZeroSubarray(int arr[],int n){
     //also insert 0 since first element could be zero too
     m.insert(sum);
     for(int i=0;i<n;++i){
-        cout<<"sum = "<<sum<<'\n';
         sum+=arr[i];
         if(m.find(sum)!=m.end())    return 1;
         m.insert(sum);
