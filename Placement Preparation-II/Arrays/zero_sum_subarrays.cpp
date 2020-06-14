@@ -21,8 +21,6 @@ int countZeroSubarray(int arr[],int n){
 
     Then we cheeck if sum now already exists in hashmap:
     >   Then we increase the counter to count of element in hashmap
-
-    now simply 
     */
 
     int c = 0;
