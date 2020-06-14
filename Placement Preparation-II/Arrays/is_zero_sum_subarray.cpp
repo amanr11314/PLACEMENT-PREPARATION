@@ -15,6 +15,7 @@ bool isZeroSubarray(int arr[],int n){
     */
     unordered_set<int> m;
     int sum = 0;
+    //also insert 0 since first element could be zero too
     m.insert(sum);
     for(int i=0;i<n;++i){
         cout<<"sum = "<<sum<<'\n';
