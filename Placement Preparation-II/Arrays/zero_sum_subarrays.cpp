@@ -13,11 +13,16 @@ int countZeroSubarray(int arr[],int n){
       x
     <------------>
           y
+    In each iteration, we increase the count of sum in hashmap by 1
     In such case we see that: x==y
     i.e. the current sum, y already exists in memory....
-    so, we store and sum up the count to previous count of this element in hashmap
 
-    now simply increase the count of particular element in hashmap by 1
+    now we add up the sum with current element of array.
+
+    Then we cheeck if sum now already exists in hashmap:
+    >   Then we increase the counter to count of element in hashmap
+
+    now simply 
     */
 
     int c = 0;
