@@ -14,7 +14,7 @@ int findMinRotated(int a[],int n){
 	        return a[m];
 	    }
         /*
-        now there are two cases:
+        now there are two cases: -
         i)  if arr[mid]<arr[n-1], then we need to search in left half of array
         ii)  if arr[mid]>arr[n-1], then we need to search in right half of array
         */
