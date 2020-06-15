@@ -7,7 +7,7 @@ int maximumProductSubArray(int arr[], int n){
     */
 
     if (n == 1)
-        cout << arr[0] << endl;
+        return arr[0] ;
     else{
 
         //initially maxProduct and minProduct are set to 1 since we need to multiply
