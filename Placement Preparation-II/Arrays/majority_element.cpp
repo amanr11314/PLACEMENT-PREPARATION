@@ -15,7 +15,7 @@ void majorityElement(int arr[],int n){
     //there is only one majority element.
 
     int major = arr[0];
-    int c = 0;
+    int c = 1;
 
     //if element is equal to majority element increase the count
     //else decrese the count
@@ -29,7 +29,10 @@ void majorityElement(int arr[],int n){
         }
         else    c--;
 
-        if(!c)  major = arr[i];
+        if(!c)  {
+            major = arr[i];
+            c=1;
+        }
     }
 
     //count frequency of major elemeny in array and if it occurs more than half of array then it is majority element..
