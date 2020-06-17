@@ -129,3 +129,19 @@ void moreThanNdK(int arr[], int n, int k) {
                 << " Count:" << ac << endl; 
     } 
 } 
+
+///Another efficient way of doing this is using unordered map:-
+
+void countMoreThanNdK(int arr[],int n){
+    unordered_map<int,int> mp;
+    mp.clear();
+    for(int i=0;i<n;++i){
+        mp[arr[i]]++;
+    }
+    int c = n/k;
+    for(auto it:mp){
+        if(it.second>c){
+            cout<<it.first<<'\n';
+        }
+    }
+}
