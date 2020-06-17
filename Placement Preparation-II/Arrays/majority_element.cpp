@@ -41,9 +41,9 @@ void majorityElement(int arr[],int n){
     int cnt = 0;
     for(int i=0;i<n;++i){
         if(arr[i]==major){
-            c++;
+            cnt++;
         }
-        if(c>n/2)  {
+        if(cnt>n/2)  {
             cout<<majorityElement<<" is majority element\n";
             return;
         }
