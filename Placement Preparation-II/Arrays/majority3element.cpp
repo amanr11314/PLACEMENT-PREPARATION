@@ -17,7 +17,7 @@ void majorityElement3(int arr[],int n){
         if(arr[i]==c_one){
             c_one_count++;
         }
-        //first candidate
+        //second candidate
         else if(arr[i]==c_two){
             c_two_count++;
         }
