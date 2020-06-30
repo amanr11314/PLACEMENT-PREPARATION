@@ -1,6 +1,48 @@
 ////Refrer to algoexpert video on youtube for better explanation
 //https://www.youtube.com/watch?v=ksXSDgQjL0I
 //to find the longest consecutive subsequence
+
+//best approach
+void solve(int n,int arr[]){
+
+    map<int,bool> table;
+        for(int i : arr){
+            table[i] = true;
+        }
+
+        int range = 0;
+
+        int maxRange = 0;
+
+        for(int i:arr){
+            if(table[i]){
+                int a = i-1;
+                int b = i+1;
+                // cout<<"Starting\n i = "<<i<<" a = "<<a<<'\n'<<"b = "<<b<<'\n';
+                
+                range = 0;
+                while(table[a]){
+                    //marking visited keys as false so not to visit again
+                    table[a] = false;
+                    a--;
+                    range++;
+                }
+                while(table[b]){
+                    //marking visited keys as false so not to visit again
+                    
+                    table[b] = false;
+                    b++;
+                    range++;
+                }
+                // cout<<"Now a = "<<a<<'\n'<<"b = "<<b<<'\n';
+                maxRange = max(range,maxRange);
+            }
+        }
+        cout<<maxRange;
+
+
+}
+
 int longestConcesutiveSubSequence(int arr[],int n){
     /*
     Find the length of the longest sub-sequence such that elements in the 
