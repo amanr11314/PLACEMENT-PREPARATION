@@ -19,7 +19,7 @@ void maxProfit2(int prices[],int n){
     int profit[n] = {0};
 
     
-    for(int j = 0;j,n;++j){
+    for(int j = 0;j<n;++j){
         maxProfit = max(maxProfit,prices[j]-minPrice);
         profit[j] = maxProfit;
         minPrice = min(minPrice,prices[j]);
