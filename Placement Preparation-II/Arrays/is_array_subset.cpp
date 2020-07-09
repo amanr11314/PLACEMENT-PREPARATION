@@ -15,7 +15,7 @@ bool approah1(int a[],int m,int b[],int n){
 }
 bool approach2(int a[],int m,int b[],int n){
     //We hash all eleemnts of larger array..
-    //then look if each element of b[] is present in has or not
+    //then look if each element of b[] is present in hash or not
 
     unordered_set<int> h;
     
