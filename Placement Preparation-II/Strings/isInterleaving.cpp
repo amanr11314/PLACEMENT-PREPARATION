@@ -44,10 +44,10 @@ bool isInterleafDP(string a,string b,string c){
             //check if c is interleaving of b,a or both
             else {
                 IL[i][j] = (
-                    (//check if current char of a==current char of b and also that till now is c interleaving a
+                    (//check if current char of a==current char of c and also that till now is c interleaving a
                         (a[i-1]==c[i+j-1]) && IL[i-1][j]
                     ) ||
-                    (//check if current char of b==current char of b and also that till now is c interleaving b
+                    (//check if current char of b==current char of c and also that till now is c interleaving b
                         (b[j-1]==c[i+j-1]) && IL[i][j-1]
                     )
                 );
