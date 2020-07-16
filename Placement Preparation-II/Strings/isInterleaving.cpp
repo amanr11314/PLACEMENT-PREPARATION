@@ -20,7 +20,7 @@ bool isInterleaf(string a,string b,string c){
 bool isInterleafDP(string a,string b,string c){
     int M = a.size();
     int N = b.size();
-    bool IL[M][10];
+    bool IL[M+1][10];
     if(
         (M + N) != c.size()
     )   return false;
