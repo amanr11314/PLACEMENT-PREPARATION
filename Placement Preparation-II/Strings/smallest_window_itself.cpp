@@ -61,7 +61,7 @@ void smallest_window_substr(string &s) {
                 cout<<l<<'\n';
                 return;
             }
-            //try to decrease count of char at left pointer
+            //decrease count of char at left pointer
             s_arr[s[left]-'A']--;
             //increase left pointer
             left++;
