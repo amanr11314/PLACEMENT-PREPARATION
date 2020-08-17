@@ -2,6 +2,7 @@ input.txt
 output.txt
 test.cpp
 test.exe
+*.exe
 .vscode
 Doubts
 Tests

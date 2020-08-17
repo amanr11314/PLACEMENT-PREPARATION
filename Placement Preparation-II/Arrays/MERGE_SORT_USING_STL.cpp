@@ -13,9 +13,10 @@ void merge_sort(int arr[],int s,int e) {
 		int len = e-s+1;
 		int *B = new int[len];
 		merge(arr+s,(arr+mid+1),(arr+mid+1),(arr+e+1),B);
-		for(int i=0;i<len;++i){
-			arr[s+i] = B[i];
-		}
+		copy_n(B, len, arr+s );
+		//for(int i=0;i<len;++i){
+			//arr[s+i] = B[i];
+		//}
 		
 	///UNCOMMENT FOR VISUALIZATION:-
 	//cout<<"--MERGED--\n";
