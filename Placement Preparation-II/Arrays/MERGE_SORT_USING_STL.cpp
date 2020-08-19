@@ -14,16 +14,13 @@ void merge_sort(int arr[],int s,int e) {
 		int *B = new int[len];
 		merge(arr+s,(arr+mid+1),(arr+mid+1),(arr+e+1),B);
 		copy_n(B, len, arr+s );
-		//for(int i=0;i<len;++i){
-			//arr[s+i] = B[i];
-		//}
 		
 	///UNCOMMENT FOR VISUALIZATION:-
-	//cout<<"--MERGED--\n";
-	//for(int i=s;i<=e;++i){
-		//cout<<arr[i]<<' ';
-	//}
-	//cout<<'\n';
+	cout<<"--MERGED--\n";
+	for(int i=s;i<=e;++i){
+		cout<<arr[i]<<' ';
+	}
+	cout<<'\n';
 }
 
 int main(){
@@ -33,13 +30,12 @@ int main(){
 	int A[n];
 	for(int i=0;i<n;++i)
 		cin>>A[i];
-	
 	merge_sort(A,0,n-1);
 	cout<<"----ARRAY AFTER SORTING----\n";
 	for(int i:A){
 		cout<<i<<' ';
 	}
-	cerr<<"time taken : "<<(float)clock()/CLOCKS_PER_SEC<<" secs"<<endl;
+	
     return 0;
 }
 
