@@ -1,3 +1,26 @@
+/**
+* Problem:- 
+* Given two strings :  text and pattern
+* find whether pattern exists in text or not.
+* If yes, print all occuences of pattern.
+* 
+* Input:-
+* text="cabbage uses cab"
+* pattern="cab"
+* 
+* Output:-
+* 0, 13
+* 
+* Time Complexity:-
+* Since we match text with each window of size of pattern :
+* len(text) = n
+* len(pattern) = m
+* total windows to match = n-m+1
+* for 1 window = m
+* so, for matching (n-m+1) windows = m*(n-m+1)
+*                                  = n*m-m^2+m
+* for very large n, we can neglect m => O(n*m) overall complexity
+**/
 #include<bits/stdc++.h>
 using namespace std;
 
