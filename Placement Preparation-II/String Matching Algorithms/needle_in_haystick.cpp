@@ -6,6 +6,7 @@
 * It should take the needle and the haystack as input, 
 * and output the positions of each occurence, as shown below.
 * Link to the problem:- https://www.spoj.com/problems/NHAY/
+* complexity: O(nlogn+m) extra log n for calculatiing modular exponentiation
 **/
 #include<bits/stdc++.h>
 #define mod 1000000007
