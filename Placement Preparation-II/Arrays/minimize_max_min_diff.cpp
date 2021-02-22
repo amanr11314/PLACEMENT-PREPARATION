@@ -30,8 +30,5 @@ int minimize_max_min_difference(std::vector<int> &a,int k,int n) {
     for(int i=0;i<n-k+1;++i)
         //ans = min diff. in window of size k i.e (last element - first element) of the window..
         ans = min(ans,a[i+k-1]-a[i]);
-<<<<<<< HEAD
     return ans;
-=======
->>>>>>> 9dc2a224b80219ce589776a8889e9ee1d727825b
 }
