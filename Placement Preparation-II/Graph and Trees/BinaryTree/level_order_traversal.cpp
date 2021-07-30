@@ -55,11 +55,57 @@ void printLevelWise(node *root) {
   puts("");
 }
 
+int findCousinSum(node *root, int key) {
+  if (root == nullptr)
+    return -1;
+  if (root->data == key)
+    return -1;
+
+  int currSum = 0;
+  int size;
+  queue<node *> q;
+  q.push(root);
+  bool found = 0;
+
+  while (!q.empty()) {
+    if (found)
+      return currSum;
+
+    size = q.size();
+
+    currSum = 0;
+
+    while (size) {
+      root = q.front();
+      q.pop();
+
+      // if current node left or right child is key then it is parent node.. so
+      // every other node at this level are uncle.. return their all child's sum
+      if ((root->left != nullptr && root->left->data == key) ||
+          (root->right != nullptr && root->right->data == key))
+        found = 1;
+      else {
+        // if not parent then uncle simply add all siblings value
+        if (root->left != nullptr) {
+          currSum += root->left->data;
+          q.push(root->left);
+        }
+        if (root->right != nullptr) {
+          currSum += root->right->data;
+          q.push(root->right);
+        }
+      }
+      size--;
+    }
+  }
+  return -1;
+}
+
 int main() {
   int _root;
-  puts("ENter root value: ");
-  cin >> _root;
-  node *root = new node(_root);
+  // puts("ENter root value: ");
+  // cin >> _root;
+  node *root = new node(1);
 
   root->left = new node(2);
   root->right = new node(3);
@@ -68,11 +114,17 @@ int main() {
   root->right->left = new node(6);
   root->right->right = new node(7);
 
-  printLevelWise(root);
+  // printLevelWise(root);
 
-  int _v = sumLeafNodesAndItself(root);
+  // int _v = sumLeafNodesAndItself(root);
 
-  printLevelWise(root);
+  // printLevelWise(root);
+  cout << findCousinSum(root, 7) << '\n';
+  cout << findCousinSum(root, 5) << '\n';
+  cout << findCousinSum(root, 3) << '\n';
+  cout << findCousinSum(root, 2) << '\n';
+  cout << findCousinSum(root, 6) << '\n';
+  cout << findCousinSum(root, 4) << '\n';
 
   return 0;
 }
